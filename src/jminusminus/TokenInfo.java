@@ -11,27 +11,34 @@ enum TokenKind {
     EOF(""),
 
     // Reserved words.
-    ABSTRACT("abstract"), BOOLEAN("boolean"), CHAR("char"), CLASS("class"), ELSE("else"),
-    EXTENDS("extends"), IF("if"), IMPORT("import"), INSTANCEOF("instanceof"), INT("int"),
-    NEW("new"), PACKAGE("package"), PRIVATE("private"), PROTECTED("protected"),
-    PUBLIC("public"), RETURN("return"), STATIC("static"), SUPER("super"), THIS("this"),
-    VOID("void"), WHILE("while"),
+    ABSTRACT("abstract"), BOOLEAN("boolean"), BREAK("break"), CASE("case"), CATCH("catch"),
+    CLASS("class"), CONTINUE("continue"), DEFLT("default"), DO("do"), DOUBLE("double"),
+    ELSE("else"), EXTENDS("extends"), FINALLY("finally"), FOR("for"), CHAR("char"), IF("if"),
+    IMPLEMENTS("implements"), IMPORT("import"), INSTANCEOF("instanceof"), INT("int"),
+    INTERFACE("interface"), LONG("long"), NEW("new"), PACKAGE("package"), PRIVATE("private"),
+    PROTECTED("protected"), PUBLIC("public"), RETURN("return"), STATIC("static"), SUPER("super"),
+    SWITCH("switch"), THIS("this"), THROW("throw"), THROWS("throws"), TRY("try"), VOID("void"),
+    WHILE("while"),
 
     // Operators.
-    ASSIGN("="), DEC("--"), EQUAL("=="), GT(">"), INC("++"), LAND("&&"), LE("<="), LNOT("!"),
-    MINUS("-"), PLUS("+"), PLUS_ASSIGN("+="), STAR("*"),
+    ALSHIFT("<<"), ALSHIFT_ASSIGN("<<="), AND("&"), AND_ASSIGN("&="), ARSHIFT(">>"),
+    ARSHIFT_ASSIGN(">>="), ASSIGN("="), COLON(":"), DEC("--"), DIV("/"), DIV_ASSIGN("/="),
+    EQUAL("=="), GE(">="), GT(">"), INC("++"), LAND("&&"), LE("<="), LNOT("!"), LOR("||"),
+    LRSHIFT(">>>"), LRSHIFT_ASSIGN(">>>="), LT("<"), MINUS("-"), MINUS_ASSIGN("-="), NOT("~"),
+    NOT_EQUAL("!="), OR("|"), OR_ASSIGN("|="), PLUS("+"), PLUS_ASSIGN("+="), QUESTION("?"),
+    REM("%"), REM_ASSIGN("%="), STAR("*"), STAR_ASSIGN("*="), XOR("^"), XOR_ASSIGN("^="),
 
     // Separators.
     COMMA(","), DOT("."), LBRACK("["), LCURLY("{"), LPAREN("("), RBRACK("]"), RCURLY("}"),
-    RPAREN(")"), SEMI(";"), DIV("/"), REM("%"), NOT("~"),
-    OR("|"), XOR("^"), AND("&"), ALEFT("<<"), ARIGHT(">>"), LRIGHT(">>>"),
+    RPAREN(")"), SEMI(";"),
 
     // Identifiers.
     IDENTIFIER("<IDENTIFIER>"),
 
     // Literals.
-    CHAR_LITERAL("<CHAR_LITERAL>"), FALSE("false"), INT_LITERAL("<INT_LITERAL>"), NULL("null"),
-    STRING_LITERAL("<STRING_LITERAL>"), TRUE("true");
+    NULL("null"), FALSE("false"), TRUE("true"), INT_LITERAL("<INT_LITERAL>"),
+    CHAR_LITERAL("<CHAR_LITERAL>"), STRING_LITERAL("<STRING_LITERAL>"),
+    LONG_LITERAL("<LONG_LITERAL>"), DOUBLE_LITERAL("<DOUBLE_LITERAL>");
 
     // The token kind's string representation.
     private String image;
